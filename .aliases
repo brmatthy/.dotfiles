@@ -1,0 +1,6 @@
+alias v='nvim'
+alias cmcd='cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1'
+alias diff='diff --color=auto'
+alias grep='grep --color=auto'
+alias ls='eza --icons --color=always --group-directories-first'
+alias player='if playerctl -l | grep -q "spotify"; then playerctl -p spotify "$@"; else playerctl "$@"; fi'
