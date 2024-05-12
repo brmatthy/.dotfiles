@@ -1,1 +1,3 @@
-distrobox/
+^/distrobox
+^/README.md
+^/LICENCE
