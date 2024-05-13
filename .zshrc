@@ -35,12 +35,16 @@ source $HOME/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 EDITOR=$(which nvim)
 
+# Add user bin to path
+export PATH=$PATH:$HOME/.local/bin
+
 # Add starship prompt
 eval "$(starship init zsh)"
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 
 # Add rust to the path
-export PATH=$PATH:$HOME/.cargo/bin
+#export PATH=$PATH:$HOME/.cargo/bin
+
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
