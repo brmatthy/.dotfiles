@@ -8,20 +8,23 @@
 }
 
 /* base layout for all the blocks */
-#custom-spotify, #custom-power, #network, #pulseaudio, #workspaces button, #clock {
+#backlight, #battery, #custom-spotify, #custom-power, #network, #pulseaudio, #workspaces button, #clock {
   all: initial; /* Remove GTK theme values (waybar #1351) */
   min-width: 0; /* Fix weird spacing in materia (waybar #450) */
   box-shadow: inset 0 -3px transparent; /* Use box-shadow instead of border so the text isn't offset */
-  padding: 3px 18px;
-  margin: 3px 3px;
-  border-radius: 4px;
+  padding: 3px 10px;
   font-size: 12px;
   background-color: transparent;
   font-family: RobotoMono Nerd Font;
 }
 
-window#waybar {
+.modules-right, .modules-center, .modules-left{
   background-color: @base;
+  border-radius: 10px;
+}
+
+window#waybar {
+  background-color: transparent;
   transition-property: background-color;
   transition-duration: 0.5s;
 }
@@ -35,16 +38,19 @@ window#waybar.hidden {
 }
 
 #workspaces button {
+  border-radius: 10px;
   background-color: @base;
   color: @text;
 }
 
 #workspaces button.active {
+  border-radius: 10px;
   color: @base;
   background-color: @peach;
 }
 
 #workspaces button:hover {
+  border-radius: 10px;
  box-shadow: inherit;
  text-shadow: inherit;
  color: @base;
@@ -52,11 +58,13 @@ window#waybar.hidden {
 }
 
 #workspaces button.urgent {
+  border-radius: 10px;
   background-color: @red;
 }
 
 #workspaces button.visible {
-    border-bottom: 3px solid @peach;
+  border-radius: 10px;
+  border-bottom: 3px solid @peach;
 }
 
 #clock {
@@ -64,31 +72,29 @@ window#waybar.hidden {
 }
 
 #pulseaudio {
-    background-color: @sky;
-    color: @base;
+    color: @text;
 }
 
 #pulseaudio.muted {
-    background-color: @red;
-    color: @base;
+    color: @red;
 }
 
 #network.ethernet, #network.wifi {
-    background-color: @teal;
-    color: @base;
+    color: @text;
 }
 
 #network, #network.disabled, #network.disconnected{
-    background-color: @red;
-    color: @base;
+    color: @red;
 }
 
 #custom-power {
-  background-color: @sapphire;
-  color: @base;
+  color: @text;
 }
 
-#custom-spotify {
-  background-color: @green;
-  color: @base;
+#battery {
+  color: @text;
+}
+
+#backlight {
+  color: @text;
 }

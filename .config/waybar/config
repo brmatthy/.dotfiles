@@ -1,12 +1,32 @@
 {
     "layer": "top",
+    "margin-top": 6,
+    "margin-left": 6,
+    "margin-right": 6,
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/spotify", "network","pulseaudio", "custom/power"],
+    "modules-right": ["custom/spotify", "network", "pulseaudio", "backlight", "battery", "custom/power"],
 
     "clock": {
 				"interval": 1,
         "format": "{:%a %d %B %Y %H:%M:%S}"
+    },
+
+    "battery": {
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip": true,
+    },
+
+    "backlight": {
+        "format": "{percent}% {icon}",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "scroll-step": 5.0,
     },
 
 		"hyprland/workspaces": {
@@ -46,7 +66,6 @@
 		},
 
 		"network": {
-				"interface": "wlp6s0",
 				"format": "󰤭",
 				"format-wifi": " {bandwidthDownBytes} {icon}",
 				"format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
