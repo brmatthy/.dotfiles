@@ -1,6 +1,5 @@
 {
     "layer": "top",
-		"output": "HDMI-A-1",
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
     "modules-right": ["custom/spotify", "network","pulseaudio", "custom/power"],
